@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<script type="text/javascript" src="js/jquery-1.12.0.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/reportng.css" />
+	<script type="text/javascript">  
+    	$(document).ready(function () {  
+	            $('tr.parent')  
+	                .css("cursor", "pointer")  
+	                .attr("title", "Click to expand/collapse")  
+	                .click(function () {  
+	                    $(this).siblings('.child-' + this.id).toggle();  
+	                });
+	                $('tr.parent')  
+	                .css("cursor", "pointer")  
+	                .attr("title", "Click to expand/collapse")  
+	                .click();
+	    });
+	    function changeIcon(elementId) {
+			if ($('#'+elementId).hasClass('glyphicon glyphicon-minus')){
+				$('#'+elementId).removeClass('glyphicon glyphicon-minus').toggleClass('glyphicon glyphicon-plus');
+			}else{
+				$('#'+elementId).removeClass('glyphicon glyphicon-plus').toggleClass('glyphicon glyphicon-minus');
+			}
+		}
+		function showReport(element,report){$(element).children(".tipFrame").attr('src', report).show();}
+		function hideReport(element){$(element).children(".tipFrame").hide();}
+    </script>
+</head>
+<body>
+<h3 class="failTitle">New</h3>
+<div>
+	<div class="well well-large">
+	<h4>Regression Issues</h4>
+		<table class="table table-bordered" width="100%;" id="features">
+			<thead>
+				<tr>
+					<th scope="col" width="30px">#</th>
+					<th scope="col">Issue</th>
+					<th scope="col" colspan="2">Total Affected Tests</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="parent" id="row0" title="Click to expand/collapse" style="cursor: pointer;" onclick="changeIcon('span-9bae3f4f-2d97-4b7c-b06b-0f8764c71ad0'); ">
+<td><span id="span-9bae3f4f-2d97-4b7c-b06b-0f8764c71ad0" class="glyphicon glyphicon-minus" style="color:blue"></span></td>
+<td class="break-word">java.lang.reflect.InvocationTargetException
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-NU8MI4J&apos;, ip: &apos;10.23.252.35&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4.1&apos;
+Driver info: driver.version: RemoteWebDriver</td><td>3</td><td></td></tr><tr class="child-row0" style="display: table-row;"><td></td><td><i>Suite Name</i></td><td><i>Test Name</i></td><td><i>Class Name</i></td></tr><tr class="child-row0" style="display: table-row;"><td></td><td><a href="suites_overview.html#Regression Suite">Regression Suite</a></td><td><a href="suite1_test1_results.html">eCollabDDS Tests</a></td><td class="break-word">tests.Admin_HospitalUsers_Pages_Tests</td></tr>
+<tr class="child-row0" style="display: table-row;"><td></td><td><a href="suites_overview.html#Regression Suite">Regression Suite</a></td><td><a href="suite1_test1_results.html">eCollabDDS Tests</a></td><td class="break-word">tests.Admin_HospitalUsers_Pages_Tests</td></tr>
+<tr class="child-row0" style="display: table-row;"><td></td><td><a href="suites_overview.html#Regression Suite">Regression Suite</a></td><td><a href="suite1_test1_results.html">eCollabDDS Tests</a></td><td class="break-word">tests.Admin_HospitalUsers_Pages_Tests</td></tr>
+<tr class="parent" id="row1" title="Click to expand/collapse" style="cursor: pointer;" onclick="changeIcon('span-139c8a03-e0b4-418e-8667-75d6224eb87c'); ">
+<td><span id="span-139c8a03-e0b4-418e-8667-75d6224eb87c" class="glyphicon glyphicon-minus" style="color:blue"></span></td>
+<td class="break-word">no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#cardbgorgan&quot;}
+  (Session info: chrome=108.0.5359.126)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-NU8MI4J&apos;, ip: &apos;10.23.252.35&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.126, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\NICSI\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63552}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f4b9d79fd18fd1346dcf396e49071bfa
+*** Element info: {Using=id, value=cardbgorgan}</td><td>1</td><td></td></tr><tr class="child-row1" style="display: table-row;"><td></td><td><i>Suite Name</i></td><td><i>Test Name</i></td><td><i>Class Name</i></td></tr><tr class="child-row1" style="display: table-row;"><td></td><td><a href="suites_overview.html#Regression Suite">Regression Suite</a></td><td><a href="suite1_test1_results.html">eCollabDDS Tests</a></td><td class="break-word">tests.Admin_Client_Organization_Pages_Tests</td></tr>
+<tr class="parent" id="row2" title="Click to expand/collapse" style="cursor: pointer;" onclick="changeIcon('span-1efa7a98-f24e-4810-9af5-f16c34980601'); ">
+<td><span id="span-1efa7a98-f24e-4810-9af5-f16c34980601" class="glyphicon glyphicon-minus" style="color:blue"></span></td>
+<td class="break-word">no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;addupdateform&apos;]/div/div[3]/div[1]/div[1]/b[1]&quot;}
+  (Session info: chrome=108.0.5359.126)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-NU8MI4J&apos;, ip: &apos;10.23.252.35&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.126, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\NICSI\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63552}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f4b9d79fd18fd1346dcf396e49071bfa
+*** Element info: {Using=xpath, value=//*[@id=&apos;addupdateform&apos;]/div/div[3]/div[1]/div[1]/b[1]}</td><td>1</td><td></td></tr><tr class="child-row2" style="display: table-row;"><td></td><td><i>Suite Name</i></td><td><i>Test Name</i></td><td><i>Class Name</i></td></tr><tr class="child-row2" style="display: table-row;"><td></td><td><a href="suites_overview.html#Regression Suite">Regression Suite</a></td><td><a href="suite1_test1_results.html">eCollabDDS Tests</a></td><td class="break-word">tests.Admin_Client_Application_Pages_Tests</td></tr>
+<tr class="parent" id="row3" title="Click to expand/collapse" style="cursor: pointer;" onclick="changeIcon('span-27888a40-5b1d-4a15-91ab-7da787aced32'); ">
+<td><span id="span-27888a40-5b1d-4a15-91ab-7da787aced32" class="glyphicon glyphicon-minus" style="color:blue"></span></td>
+<td class="break-word">no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;cardadmin&apos;]/div[2]/div/label[2]&quot;}
+  (Session info: chrome=108.0.5359.126)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-NU8MI4J&apos;, ip: &apos;10.23.252.35&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.126, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\NICSI\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63552}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f4b9d79fd18fd1346dcf396e49071bfa
+*** Element info: {Using=xpath, value=//*[@id=&apos;cardadmin&apos;]/div[2]/div/label[2]}</td><td>4</td><td></td></tr><tr class="child-row3" style="display: table-row;"><td></td><td><i>Suite Name</i></td><td><i>Test Name</i></td><td><i>Class Name</i></td></tr><tr class="child-row3" style="display: table-row;"><td></td><td><a href="suites_overview.html#Regression Suite">Regression Suite</a></td><td><a href="suite1_test1_results.html">eCollabDDS Tests</a></td><td class="break-word">tests.Admin_Client_Organization_Pages_Tests</td></tr>
+<tr class="child-row3" style="display: table-row;"><td></td><td><a href="suites_overview.html#Regression Suite">Regression Suite</a></td><td><a href="suite1_test1_results.html">eCollabDDS Tests</a></td><td class="break-word">tests.Admin_Client_Organization_Pages_Tests</td></tr>
+<tr class="child-row3" style="display: table-row;"><td></td><td><a href="suites_overview.html#Regression Suite">Regression Suite</a></td><td><a href="suite1_test1_results.html">eCollabDDS Tests</a></td><td class="break-word">tests.Admin_Client_Organization_Pages_Tests</td></tr>
+<tr class="child-row3" style="display: table-row;"><td></td><td><a href="suites_overview.html#Regression Suite">Regression Suite</a></td><td><a href="suite1_test1_results.html">eCollabDDS Tests</a></td><td class="break-word">tests.Admin_Client_Organization_Pages_Tests</td></tr>
+<tr class="parent" id="row4" title="Click to expand/collapse" style="cursor: pointer;" onclick="changeIcon('span-3c74f7e7-58f3-4cba-9390-8e78ecf67dbd'); ">
+<td><span id="span-3c74f7e7-58f3-4cba-9390-8e78ecf67dbd" class="glyphicon glyphicon-minus" style="color:blue"></span></td>
+<td class="break-word">no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;cardadmin&apos;]/div[3]/div/label[2]&quot;}
+  (Session info: chrome=108.0.5359.126)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-NU8MI4J&apos;, ip: &apos;10.23.252.35&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.126, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\NICSI\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63552}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f4b9d79fd18fd1346dcf396e49071bfa
+*** Element info: {Using=xpath, value=//*[@id=&apos;cardadmin&apos;]/div[3]/div/label[2]}</td><td>4</td><td></td></tr><tr class="child-row4" style="display: table-row;"><td></td><td><i>Suite Name</i></td><td><i>Test Name</i></td><td><i>Class Name</i></td></tr><tr class="child-row4" style="display: table-row;"><td></td><td><a href="suites_overview.html#Regression Suite">Regression Suite</a></td><td><a href="suite1_test1_results.html">eCollabDDS Tests</a></td><td class="break-word">tests.Admin_Client_Application_Pages_Tests</td></tr>
+<tr class="child-row4" style="display: table-row;"><td></td><td><a href="suites_overview.html#Regression Suite">Regression Suite</a></td><td><a href="suite1_test1_results.html">eCollabDDS Tests</a></td><td class="break-word">tests.Admin_Client_Application_Pages_Tests</td></tr>
+<tr class="child-row4" style="display: table-row;"><td></td><td><a href="suites_overview.html#Regression Suite">Regression Suite</a></td><td><a href="suite1_test1_results.html">eCollabDDS Tests</a></td><td class="break-word">tests.Admin_Client_Application_Pages_Tests</td></tr>
+<tr class="child-row4" style="display: table-row;"><td></td><td><a href="suites_overview.html#Regression Suite">Regression Suite</a></td><td><a href="suite1_test1_results.html">eCollabDDS Tests</a></td><td class="break-word">tests.Admin_Client_Application_Pages_Tests</td></tr>
+<tr class="parent" id="row5" title="Click to expand/collapse" style="cursor: pointer;" onclick="changeIcon('span-a8e60f86-509f-4c6d-8831-ea9523317d22'); ">
+<td><span id="span-a8e60f86-509f-4c6d-8831-ea9523317d22" class="glyphicon glyphicon-minus" style="color:blue"></span></td>
+<td class="break-word">no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;cardadmin&apos;]/div[3]/div/label[3]&quot;}
+  (Session info: chrome=108.0.5359.126)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-NU8MI4J&apos;, ip: &apos;10.23.252.35&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.126, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\NICSI\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63552}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f4b9d79fd18fd1346dcf396e49071bfa
+*** Element info: {Using=xpath, value=//*[@id=&apos;cardadmin&apos;]/div[3]/div/label[3]}</td><td>1</td><td></td></tr><tr class="child-row5" style="display: table-row;"><td></td><td><i>Suite Name</i></td><td><i>Test Name</i></td><td><i>Class Name</i></td></tr><tr class="child-row5" style="display: table-row;"><td></td><td><a href="suites_overview.html#Regression Suite">Regression Suite</a></td><td><a href="suite1_test1_results.html">eCollabDDS Tests</a></td><td class="break-word">tests.Admin_Client_Application_Pages_Tests</td></tr>
+<tr class="parent" id="row6" title="Click to expand/collapse" style="cursor: pointer;" onclick="changeIcon('span-83cec739-eeb8-4e35-941c-4a26f9b7073f'); ">
+<td><span id="span-83cec739-eeb8-4e35-941c-4a26f9b7073f" class="glyphicon glyphicon-minus" style="color:blue"></span></td>
+<td class="break-word">no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;cardadmin&apos;]/div[4]/div/label[1]&quot;}
+  (Session info: chrome=108.0.5359.126)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-NU8MI4J&apos;, ip: &apos;10.23.252.35&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.126, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\NICSI\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63552}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f4b9d79fd18fd1346dcf396e49071bfa
+*** Element info: {Using=xpath, value=//*[@id=&apos;cardadmin&apos;]/div[4]/div/label[1]}</td><td>1</td><td></td></tr><tr class="child-row6" style="display: table-row;"><td></td><td><i>Suite Name</i></td><td><i>Test Name</i></td><td><i>Class Name</i></td></tr><tr class="child-row6" style="display: table-row;"><td></td><td><a href="suites_overview.html#Regression Suite">Regression Suite</a></td><td><a href="suite1_test1_results.html">eCollabDDS Tests</a></td><td class="break-word">tests.Admin_Hospitals_Pages_Tests</td></tr>
+<tr class="parent" id="row7" title="Click to expand/collapse" style="cursor: pointer;" onclick="changeIcon('span-06e901c9-8ada-455f-b8f8-74536e86df0d'); ">
+<td><span id="span-06e901c9-8ada-455f-b8f8-74536e86df0d" class="glyphicon glyphicon-minus" style="color:blue"></span></td>
+<td class="break-word">no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;cardadmin&apos;]/div[4]/div/label[2]&quot;}
+  (Session info: chrome=108.0.5359.126)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-NU8MI4J&apos;, ip: &apos;10.23.252.35&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.126, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\NICSI\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63552}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f4b9d79fd18fd1346dcf396e49071bfa
+*** Element info: {Using=xpath, value=//*[@id=&apos;cardadmin&apos;]/div[4]/div/label[2]}</td><td>5</td><td></td></tr><tr class="child-row7" style="display: table-row;"><td></td><td><i>Suite Name</i></td><td><i>Test Name</i></td><td><i>Class Name</i></td></tr><tr class="child-row7" style="display: table-row;"><td></td><td><a href="suites_overview.html#Regression Suite">Regression Suite</a></td><td><a href="suite1_test1_results.html">eCollabDDS Tests</a></td><td class="break-word">tests.Admin_Hospitals_Pages_Tests</td></tr>
+<tr class="child-row7" style="display: table-row;"><td></td><td><a href="suites_overview.html#Regression Suite">Regression Suite</a></td><td><a href="suite1_test1_results.html">eCollabDDS Tests</a></td><td class="break-word">tests.Admin_Hospitals_Pages_Tests</td></tr>
+<tr class="child-row7" style="display: table-row;"><td></td><td><a href="suites_overview.html#Regression Suite">Regression Suite</a></td><td><a href="suite1_test1_results.html">eCollabDDS Tests</a></td><td class="break-word">tests.Admin_Hospitals_Pages_Tests</td></tr>
+<tr class="child-row7" style="display: table-row;"><td></td><td><a href="suites_overview.html#Regression Suite">Regression Suite</a></td><td><a href="suite1_test1_results.html">eCollabDDS Tests</a></td><td class="break-word">tests.Admin_Hospitals_Pages_Tests</td></tr>
+<tr class="child-row7" style="display: table-row;"><td></td><td><a href="suites_overview.html#Regression Suite">Regression Suite</a></td><td><a href="suite1_test1_results.html">eCollabDDS Tests</a></td><td class="break-word">tests.Admin_Hospitals_Pages_Tests</td></tr>
+<tr class="parent" id="row8" title="Click to expand/collapse" style="cursor: pointer;" onclick="changeIcon('span-a0e43f41-6032-4d92-9110-004aa41c78a3'); ">
+<td><span id="span-a0e43f41-6032-4d92-9110-004aa41c78a3" class="glyphicon glyphicon-minus" style="color:blue"></span></td>
+<td class="break-word">no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;cardadmin&apos;]/div[4]/div/label[3]&quot;}
+  (Session info: chrome=108.0.5359.126)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-NU8MI4J&apos;, ip: &apos;10.23.252.35&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.126, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\NICSI\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63552}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f4b9d79fd18fd1346dcf396e49071bfa
+*** Element info: {Using=xpath, value=//*[@id=&apos;cardadmin&apos;]/div[4]/div/label[3]}</td><td>1</td><td></td></tr><tr class="child-row8" style="display: table-row;"><td></td><td><i>Suite Name</i></td><td><i>Test Name</i></td><td><i>Class Name</i></td></tr><tr class="child-row8" style="display: table-row;"><td></td><td><a href="suites_overview.html#Regression Suite">Regression Suite</a></td><td><a href="suite1_test1_results.html">eCollabDDS Tests</a></td><td class="break-word">tests.Admin_Hospitals_Pages_Tests</td></tr>
+<tr class="parent" id="row9" title="Click to expand/collapse" style="cursor: pointer;" onclick="changeIcon('span-863468ed-3bbb-4ce3-8de6-6234fbae5565'); ">
+<td><span id="span-863468ed-3bbb-4ce3-8de6-6234fbae5565" class="glyphicon glyphicon-minus" style="color:blue"></span></td>
+<td class="break-word">no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;cardadmin&apos;]/div[5]/div/label[1]&quot;}
+  (Session info: chrome=108.0.5359.126)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-NU8MI4J&apos;, ip: &apos;10.23.252.35&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.126, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\NICSI\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63552}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f4b9d79fd18fd1346dcf396e49071bfa
+*** Element info: {Using=xpath, value=//*[@id=&apos;cardadmin&apos;]/div[5]/div/label[1]}</td><td>2</td><td></td></tr><tr class="child-row9" style="display: table-row;"><td></td><td><i>Suite Name</i></td><td><i>Test Name</i></td><td><i>Class Name</i></td></tr><tr class="child-row9" style="display: table-row;"><td></td><td><a href="suites_overview.html#Regression Suite">Regression Suite</a></td><td><a href="suite1_test1_results.html">eCollabDDS Tests</a></td><td class="break-word">tests.Admin_HospitalUsers_Pages_Tests</td></tr>
+<tr class="child-row9" style="display: table-row;"><td></td><td><a href="suites_overview.html#Regression Suite">Regression Suite</a></td><td><a href="suite1_test1_results.html">eCollabDDS Tests</a></td><td class="break-word">tests.Admin_HospitalUsers_Pages_Tests</td></tr>
+<tr class="parent" id="row10" title="Click to expand/collapse" style="cursor: pointer;" onclick="changeIcon('span-e6531a76-1bb0-4d69-9277-7e2fe5d7db33'); ">
+<td><span id="span-e6531a76-1bb0-4d69-9277-7e2fe5d7db33" class="glyphicon glyphicon-minus" style="color:blue"></span></td>
+<td class="break-word">no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;cardadmin&apos;]/div[5]/div/label[3]&quot;}
+  (Session info: chrome=108.0.5359.126)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-NU8MI4J&apos;, ip: &apos;10.23.252.35&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.126, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\NICSI\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63552}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f4b9d79fd18fd1346dcf396e49071bfa
+*** Element info: {Using=xpath, value=//*[@id=&apos;cardadmin&apos;]/div[5]/div/label[3]}</td><td>1</td><td></td></tr><tr class="child-row10" style="display: table-row;"><td></td><td><i>Suite Name</i></td><td><i>Test Name</i></td><td><i>Class Name</i></td></tr><tr class="child-row10" style="display: table-row;"><td></td><td><a href="suites_overview.html#Regression Suite">Regression Suite</a></td><td><a href="suite1_test1_results.html">eCollabDDS Tests</a></td><td class="break-word">tests.Admin_HospitalUsers_Pages_Tests</td></tr>
+<tr class="parent" id="row11" title="Click to expand/collapse" style="cursor: pointer;" onclick="changeIcon('span-d6c04ee9-d7aa-488d-8477-fb94a47cfd72'); ">
+<td><span id="span-d6c04ee9-d7aa-488d-8477-fb94a47cfd72" class="glyphicon glyphicon-minus" style="color:blue"></span></td>
+<td class="break-word">no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;cardbgclient&apos;]&quot;}
+  (Session info: chrome=108.0.5359.126)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-NU8MI4J&apos;, ip: &apos;10.23.252.35&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.126, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\NICSI\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63552}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f4b9d79fd18fd1346dcf396e49071bfa
+*** Element info: {Using=xpath, value=//*[@id=&apos;cardbgclient&apos;]}</td><td>1</td><td></td></tr><tr class="child-row11" style="display: table-row;"><td></td><td><i>Suite Name</i></td><td><i>Test Name</i></td><td><i>Class Name</i></td></tr><tr class="child-row11" style="display: table-row;"><td></td><td><a href="suites_overview.html#Regression Suite">Regression Suite</a></td><td><a href="suite1_test1_results.html">eCollabDDS Tests</a></td><td class="break-word">tests.Admin_Client_Application_Pages_Tests</td></tr>
+<tr class="parent" id="row12" title="Click to expand/collapse" style="cursor: pointer;" onclick="changeIcon('span-c91c32b3-1ca3-43f5-9361-28dc56221988'); ">
+<td><span id="span-c91c32b3-1ca3-43f5-9361-28dc56221988" class="glyphicon glyphicon-minus" style="color:blue"></span></td>
+<td class="break-word">no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;cardbghospitals&apos;]&quot;}
+  (Session info: chrome=108.0.5359.126)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-NU8MI4J&apos;, ip: &apos;10.23.252.35&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.126, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\NICSI\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63552}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f4b9d79fd18fd1346dcf396e49071bfa
+*** Element info: {Using=xpath, value=//*[@id=&apos;cardbghospitals&apos;]}</td><td>1</td><td></td></tr><tr class="child-row12" style="display: table-row;"><td></td><td><i>Suite Name</i></td><td><i>Test Name</i></td><td><i>Class Name</i></td></tr><tr class="child-row12" style="display: table-row;"><td></td><td><a href="suites_overview.html#Regression Suite">Regression Suite</a></td><td><a href="suite1_test1_results.html">eCollabDDS Tests</a></td><td class="break-word">tests.Admin_Hospitals_Pages_Tests</td></tr>
+<tr class="parent" id="row13" title="Click to expand/collapse" style="cursor: pointer;" onclick="changeIcon('span-bd658d6c-7a18-4f0e-ba28-288c5918f805'); ">
+<td><span id="span-bd658d6c-7a18-4f0e-ba28-288c5918f805" class="glyphicon glyphicon-minus" style="color:blue"></span></td>
+<td class="break-word">no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;cardbguser&apos;]&quot;}
+  (Session info: chrome=108.0.5359.126)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-NU8MI4J&apos;, ip: &apos;10.23.252.35&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.126, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\NICSI\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63552}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f4b9d79fd18fd1346dcf396e49071bfa
+*** Element info: {Using=xpath, value=//*[@id=&apos;cardbguser&apos;]}</td><td>1</td><td></td></tr><tr class="child-row13" style="display: table-row;"><td></td><td><i>Suite Name</i></td><td><i>Test Name</i></td><td><i>Class Name</i></td></tr><tr class="child-row13" style="display: table-row;"><td></td><td><a href="suites_overview.html#Regression Suite">Regression Suite</a></td><td><a href="suite1_test1_results.html">eCollabDDS Tests</a></td><td class="break-word">tests.Admin_HospitalUsers_Pages_Tests</td></tr>
+<tr class="parent" id="row14" title="Click to expand/collapse" style="cursor: pointer;" onclick="changeIcon('span-bb28d575-3b69-4d72-a387-05e33cee0457'); ">
+<td><span id="span-bb28d575-3b69-4d72-a387-05e33cee0457" class="glyphicon glyphicon-minus" style="color:blue"></span></td>
+<td class="break-word">no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;client-save&apos;]&quot;}
+  (Session info: chrome=108.0.5359.126)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-NU8MI4J&apos;, ip: &apos;10.23.252.35&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.126, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\NICSI\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63552}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f4b9d79fd18fd1346dcf396e49071bfa
+*** Element info: {Using=xpath, value=//*[@id=&apos;client-save&apos;]}</td><td>1</td><td></td></tr><tr class="child-row14" style="display: table-row;"><td></td><td><i>Suite Name</i></td><td><i>Test Name</i></td><td><i>Class Name</i></td></tr><tr class="child-row14" style="display: table-row;"><td></td><td><a href="suites_overview.html#Regression Suite">Regression Suite</a></td><td><a href="suite1_test1_results.html">eCollabDDS Tests</a></td><td class="break-word">tests.Admin_Client_Application_Pages_Tests</td></tr>
+<tr class="parent" id="row15" title="Click to expand/collapse" style="cursor: pointer;" onclick="changeIcon('span-60127bb6-b15d-45f4-a729-5cecb5ef8b92'); ">
+<td><span id="span-60127bb6-b15d-45f4-a729-5cecb5ef8b92" class="glyphicon glyphicon-minus" style="color:blue"></span></td>
+<td class="break-word">no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;countclient&apos;]&quot;}
+  (Session info: chrome=108.0.5359.126)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-NU8MI4J&apos;, ip: &apos;10.23.252.35&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.126, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\NICSI\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63552}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f4b9d79fd18fd1346dcf396e49071bfa
+*** Element info: {Using=xpath, value=//*[@id=&apos;countclient&apos;]}</td><td>1</td><td></td></tr><tr class="child-row15" style="display: table-row;"><td></td><td><i>Suite Name</i></td><td><i>Test Name</i></td><td><i>Class Name</i></td></tr><tr class="child-row15" style="display: table-row;"><td></td><td><a href="suites_overview.html#Regression Suite">Regression Suite</a></td><td><a href="suite1_test1_results.html">eCollabDDS Tests</a></td><td class="break-word">tests.Admin_Client_Application_Pages_Tests</td></tr>
+<tr class="parent" id="row16" title="Click to expand/collapse" style="cursor: pointer;" onclick="changeIcon('span-c4188560-6463-4d77-a0e7-66dad62db845'); ">
+<td><span id="span-c4188560-6463-4d77-a0e7-66dad62db845" class="glyphicon glyphicon-minus" style="color:blue"></span></td>
+<td class="break-word">no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;counthospital&apos;]&quot;}
+  (Session info: chrome=108.0.5359.126)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-NU8MI4J&apos;, ip: &apos;10.23.252.35&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.126, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\NICSI\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63552}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f4b9d79fd18fd1346dcf396e49071bfa
+*** Element info: {Using=xpath, value=//*[@id=&apos;counthospital&apos;]}</td><td>1</td><td></td></tr><tr class="child-row16" style="display: table-row;"><td></td><td><i>Suite Name</i></td><td><i>Test Name</i></td><td><i>Class Name</i></td></tr><tr class="child-row16" style="display: table-row;"><td></td><td><a href="suites_overview.html#Regression Suite">Regression Suite</a></td><td><a href="suite1_test1_results.html">eCollabDDS Tests</a></td><td class="break-word">tests.Admin_Hospitals_Pages_Tests</td></tr>
+<tr class="parent" id="row17" title="Click to expand/collapse" style="cursor: pointer;" onclick="changeIcon('span-499d19f6-fe7a-4dc8-be00-0a182c6326c7'); ">
+<td><span id="span-499d19f6-fe7a-4dc8-be00-0a182c6326c7" class="glyphicon glyphicon-minus" style="color:blue"></span></td>
+<td class="break-word">no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;countorgan&apos;]&quot;}
+  (Session info: chrome=108.0.5359.126)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-NU8MI4J&apos;, ip: &apos;10.23.252.35&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.126, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\NICSI\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63552}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f4b9d79fd18fd1346dcf396e49071bfa
+*** Element info: {Using=xpath, value=//*[@id=&apos;countorgan&apos;]}</td><td>1</td><td></td></tr><tr class="child-row17" style="display: table-row;"><td></td><td><i>Suite Name</i></td><td><i>Test Name</i></td><td><i>Class Name</i></td></tr><tr class="child-row17" style="display: table-row;"><td></td><td><a href="suites_overview.html#Regression Suite">Regression Suite</a></td><td><a href="suite1_test1_results.html">eCollabDDS Tests</a></td><td class="break-word">tests.Admin_Client_Organization_Pages_Tests</td></tr>
+<tr class="parent" id="row18" title="Click to expand/collapse" style="cursor: pointer;" onclick="changeIcon('span-bd932c23-9201-46e9-b3c0-bfc29fc4f9cc'); ">
+<td><span id="span-bd932c23-9201-46e9-b3c0-bfc29fc4f9cc" class="glyphicon glyphicon-minus" style="color:blue"></span></td>
+<td class="break-word">no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;countuser&apos;]&quot;}
+  (Session info: chrome=108.0.5359.126)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-NU8MI4J&apos;, ip: &apos;10.23.252.35&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.126, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\NICSI\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63552}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f4b9d79fd18fd1346dcf396e49071bfa
+*** Element info: {Using=xpath, value=//*[@id=&apos;countuser&apos;]}</td><td>1</td><td></td></tr><tr class="child-row18" style="display: table-row;"><td></td><td><i>Suite Name</i></td><td><i>Test Name</i></td><td><i>Class Name</i></td></tr><tr class="child-row18" style="display: table-row;"><td></td><td><a href="suites_overview.html#Regression Suite">Regression Suite</a></td><td><a href="suite1_test1_results.html">eCollabDDS Tests</a></td><td class="break-word">tests.Admin_HospitalUsers_Pages_Tests</td></tr>
+<tr class="parent" id="row19" title="Click to expand/collapse" style="cursor: pointer;" onclick="changeIcon('span-81da6008-af4e-47ab-a70d-ac2619273c3e'); ">
+<td><span id="span-81da6008-af4e-47ab-a70d-ac2619273c3e" class="glyphicon glyphicon-minus" style="color:blue"></span></td>
+<td class="break-word">no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;divappname&apos;]/div/b&quot;}
+  (Session info: chrome=108.0.5359.126)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-NU8MI4J&apos;, ip: &apos;10.23.252.35&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.126, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\NICSI\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63552}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f4b9d79fd18fd1346dcf396e49071bfa
+*** Element info: {Using=xpath, value=//*[@id=&apos;divappname&apos;]/div/b}</td><td>1</td><td></td></tr><tr class="child-row19" style="display: table-row;"><td></td><td><i>Suite Name</i></td><td><i>Test Name</i></td><td><i>Class Name</i></td></tr><tr class="child-row19" style="display: table-row;"><td></td><td><a href="suites_overview.html#Regression Suite">Regression Suite</a></td><td><a href="suite1_test1_results.html">eCollabDDS Tests</a></td><td class="break-word">tests.Admin_Client_Application_Pages_Tests</td></tr>
+<tr class="parent" id="row20" title="Click to expand/collapse" style="cursor: pointer;" onclick="changeIcon('span-86ab8aef-023d-4515-8e6b-498f61895c53'); ">
+<td><span id="span-86ab8aef-023d-4515-8e6b-498f61895c53" class="glyphicon glyphicon-minus" style="color:blue"></span></td>
+<td class="break-word">no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;divhorganizationcode&apos;]/div/b&quot;}
+  (Session info: chrome=108.0.5359.126)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-NU8MI4J&apos;, ip: &apos;10.23.252.35&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.126, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\NICSI\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63552}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f4b9d79fd18fd1346dcf396e49071bfa
+*** Element info: {Using=xpath, value=//*[@id=&apos;divhorganizationcode&apos;]/div/b}</td><td>1</td><td></td></tr><tr class="child-row20" style="display: table-row;"><td></td><td><i>Suite Name</i></td><td><i>Test Name</i></td><td><i>Class Name</i></td></tr><tr class="child-row20" style="display: table-row;"><td></td><td><a href="suites_overview.html#Regression Suite">Regression Suite</a></td><td><a href="suite1_test1_results.html">eCollabDDS Tests</a></td><td class="break-word">tests.Admin_Client_Organization_Pages_Tests</td></tr>
+<tr class="parent" id="row21" title="Click to expand/collapse" style="cursor: pointer;" onclick="changeIcon('span-a7506d17-c91c-4e00-8163-fadb1bc77dba'); ">
+<td><span id="span-a7506d17-c91c-4e00-8163-fadb1bc77dba" class="glyphicon glyphicon-minus" style="color:blue"></span></td>
+<td class="break-word">no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;divhospitals&apos;]/div[1]/div[1]/b[1]&quot;}
+  (Session info: chrome=108.0.5359.126)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-NU8MI4J&apos;, ip: &apos;10.23.252.35&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.126, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\NICSI\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63552}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f4b9d79fd18fd1346dcf396e49071bfa
+*** Element info: {Using=xpath, value=//*[@id=&apos;divhospitals&apos;]/div[1]/div[1]/b[1]}</td><td>1</td><td></td></tr><tr class="child-row21" style="display: table-row;"><td></td><td><i>Suite Name</i></td><td><i>Test Name</i></td><td><i>Class Name</i></td></tr><tr class="child-row21" style="display: table-row;"><td></td><td><a href="suites_overview.html#Regression Suite">Regression Suite</a></td><td><a href="suite1_test1_results.html">eCollabDDS Tests</a></td><td class="break-word">tests.Admin_Hospitals_Pages_Tests</td></tr>
+<tr class="parent" id="row22" title="Click to expand/collapse" style="cursor: pointer;" onclick="changeIcon('span-9759da0c-cb19-4213-970f-0146f68d2f89'); ">
+<td><span id="span-9759da0c-cb19-4213-970f-0146f68d2f89" class="glyphicon glyphicon-minus" style="color:blue"></span></td>
+<td class="break-word">no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;divmainuser&apos;]/div[1]/div[1]/b[1]&quot;}
+  (Session info: chrome=108.0.5359.126)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-NU8MI4J&apos;, ip: &apos;10.23.252.35&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.126, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\NICSI\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63552}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f4b9d79fd18fd1346dcf396e49071bfa
+*** Element info: {Using=xpath, value=//*[@id=&apos;divmainuser&apos;]/div[1]/div[1]/b[1]}</td><td>1</td><td></td></tr><tr class="child-row22" style="display: table-row;"><td></td><td><i>Suite Name</i></td><td><i>Test Name</i></td><td><i>Class Name</i></td></tr><tr class="child-row22" style="display: table-row;"><td></td><td><a href="suites_overview.html#Regression Suite">Regression Suite</a></td><td><a href="suite1_test1_results.html">eCollabDDS Tests</a></td><td class="break-word">tests.Admin_HospitalUsers_Pages_Tests</td></tr>
+<tr class="parent" id="row23" title="Click to expand/collapse" style="cursor: pointer;" onclick="changeIcon('span-edeb857e-e492-427c-b34f-b5fac321375b'); ">
+<td><span id="span-edeb857e-e492-427c-b34f-b5fac321375b" class="glyphicon glyphicon-minus" style="color:blue"></span></td>
+<td class="break-word">no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;divorganization&apos;]/div[1]/div[1]/b[1]&quot;}
+  (Session info: chrome=108.0.5359.126)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-NU8MI4J&apos;, ip: &apos;10.23.252.35&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.126, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\NICSI\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63552}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f4b9d79fd18fd1346dcf396e49071bfa
+*** Element info: {Using=xpath, value=//*[@id=&apos;divorganization&apos;]/div[1]/div[1]/b[1]}</td><td>1</td><td></td></tr><tr class="child-row23" style="display: table-row;"><td></td><td><i>Suite Name</i></td><td><i>Test Name</i></td><td><i>Class Name</i></td></tr><tr class="child-row23" style="display: table-row;"><td></td><td><a href="suites_overview.html#Regression Suite">Regression Suite</a></td><td><a href="suite1_test1_results.html">eCollabDDS Tests</a></td><td class="break-word">tests.Admin_Client_Organization_Pages_Tests</td></tr>
+<tr class="parent" id="row24" title="Click to expand/collapse" style="cursor: pointer;" onclick="changeIcon('span-842efabb-b455-4fca-9f8c-67877eff41bf'); ">
+<td><span id="span-842efabb-b455-4fca-9f8c-67877eff41bf" class="glyphicon glyphicon-minus" style="color:blue"></span></td>
+<td class="break-word">no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;hospital-save&apos;]&quot;}
+  (Session info: chrome=108.0.5359.126)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-NU8MI4J&apos;, ip: &apos;10.23.252.35&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.126, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\NICSI\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63552}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f4b9d79fd18fd1346dcf396e49071bfa
+*** Element info: {Using=xpath, value=//*[@id=&apos;hospital-save&apos;]}</td><td>1</td><td></td></tr><tr class="child-row24" style="display: table-row;"><td></td><td><i>Suite Name</i></td><td><i>Test Name</i></td><td><i>Class Name</i></td></tr><tr class="child-row24" style="display: table-row;"><td></td><td><a href="suites_overview.html#Regression Suite">Regression Suite</a></td><td><a href="suite1_test1_results.html">eCollabDDS Tests</a></td><td class="break-word">tests.Admin_Hospitals_Pages_Tests</td></tr>
+<tr class="parent" id="row25" title="Click to expand/collapse" style="cursor: pointer;" onclick="changeIcon('span-857543fc-a5a3-4793-b529-e034c5ba066f'); ">
+<td><span id="span-857543fc-a5a3-4793-b529-e034c5ba066f" class="glyphicon glyphicon-minus" style="color:blue"></span></td>
+<td class="break-word">no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;hospitalLevel&apos;]&quot;}
+  (Session info: chrome=108.0.5359.126)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-NU8MI4J&apos;, ip: &apos;10.23.252.35&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.126, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\NICSI\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63552}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f4b9d79fd18fd1346dcf396e49071bfa
+*** Element info: {Using=xpath, value=//*[@id=&apos;hospitalLevel&apos;]}</td><td>3</td><td></td></tr><tr class="child-row25" style="display: table-row;"><td></td><td><i>Suite Name</i></td><td><i>Test Name</i></td><td><i>Class Name</i></td></tr><tr class="child-row25" style="display: table-row;"><td></td><td><a href="suites_overview.html#Regression Suite">Regression Suite</a></td><td><a href="suite1_test1_results.html">eCollabDDS Tests</a></td><td class="break-word">tests.Admin_Hospitals_Pages_Tests</td></tr>
+<tr class="child-row25" style="display: table-row;"><td></td><td><a href="suites_overview.html#Regression Suite">Regression Suite</a></td><td><a href="suite1_test1_results.html">eCollabDDS Tests</a></td><td class="break-word">tests.Admin_Hospitals_Pages_Tests</td></tr>
+<tr class="child-row25" style="display: table-row;"><td></td><td><a href="suites_overview.html#Regression Suite">Regression Suite</a></td><td><a href="suite1_test1_results.html">eCollabDDS Tests</a></td><td class="break-word">tests.Admin_Hospitals_Pages_Tests</td></tr>
+<tr class="parent" id="row26" title="Click to expand/collapse" style="cursor: pointer;" onclick="changeIcon('span-3ca23cab-233d-4afc-b36e-a16ab4a689f3'); ">
+<td><span id="span-3ca23cab-233d-4afc-b36e-a16ab4a689f3" class="glyphicon glyphicon-minus" style="color:blue"></span></td>
+<td class="break-word">no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;lg_username&apos;]&quot;}
+  (Session info: chrome=108.0.5359.126)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-NU8MI4J&apos;, ip: &apos;10.23.252.35&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.126, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\NICSI\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63552}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f4b9d79fd18fd1346dcf396e49071bfa
+*** Element info: {Using=xpath, value=//*[@id=&apos;lg_username&apos;]}</td><td>1</td><td></td></tr><tr class="child-row26" style="display: table-row;"><td></td><td><i>Suite Name</i></td><td><i>Test Name</i></td><td><i>Class Name</i></td></tr><tr class="child-row26" style="display: table-row;"><td></td><td><a href="suites_overview.html#Regression Suite">Regression Suite</a></td><td><a href="suite1_test1_results.html">eCollabDDS Tests</a></td><td class="break-word">tests.Admin_Login_Tests</td></tr>
+<tr class="parent" id="row27" title="Click to expand/collapse" style="cursor: pointer;" onclick="changeIcon('span-9e579bd2-57b1-4853-bbc4-8a8d5280da5f'); ">
+<td><span id="span-9e579bd2-57b1-4853-bbc4-8a8d5280da5f" class="glyphicon glyphicon-minus" style="color:blue"></span></td>
+<td class="break-word">no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;organization-save&apos;]&quot;}
+  (Session info: chrome=108.0.5359.126)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-NU8MI4J&apos;, ip: &apos;10.23.252.35&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.126, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\NICSI\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63552}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f4b9d79fd18fd1346dcf396e49071bfa
+*** Element info: {Using=xpath, value=//*[@id=&apos;organization-save&apos;]}</td><td>1</td><td></td></tr><tr class="child-row27" style="display: table-row;"><td></td><td><i>Suite Name</i></td><td><i>Test Name</i></td><td><i>Class Name</i></td></tr><tr class="child-row27" style="display: table-row;"><td></td><td><a href="suites_overview.html#Regression Suite">Regression Suite</a></td><td><a href="suite1_test1_results.html">eCollabDDS Tests</a></td><td class="break-word">tests.Admin_Client_Organization_Pages_Tests</td></tr>
+<tr class="parent" id="row28" title="Click to expand/collapse" style="cursor: pointer;" onclick="changeIcon('span-0c7d1f1f-aea3-41a2-b65f-d56eab2391f4'); ">
+<td><span id="span-0c7d1f1f-aea3-41a2-b65f-d56eab2391f4" class="glyphicon glyphicon-minus" style="color:blue"></span></td>
+<td class="break-word">no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;tblClientList_wrapper&apos;]/div[3]/div[1]/div/table/thead/tr/th[1]&quot;}
+  (Session info: chrome=108.0.5359.126)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-NU8MI4J&apos;, ip: &apos;10.23.252.35&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.126, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\NICSI\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63552}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f4b9d79fd18fd1346dcf396e49071bfa
+*** Element info: {Using=xpath, value=//*[@id=&apos;tblClientList_wrapper&apos;]/div[3]/div[1]/div/table/thead/tr/th[1]}</td><td>1</td><td></td></tr><tr class="child-row28" style="display: table-row;"><td></td><td><i>Suite Name</i></td><td><i>Test Name</i></td><td><i>Class Name</i></td></tr><tr class="child-row28" style="display: table-row;"><td></td><td><a href="suites_overview.html#Regression Suite">Regression Suite</a></td><td><a href="suite1_test1_results.html">eCollabDDS Tests</a></td><td class="break-word">tests.Admin_Client_Application_Pages_Tests</td></tr>
+<tr class="parent" id="row29" title="Click to expand/collapse" style="cursor: pointer;" onclick="changeIcon('span-d6945a9c-263f-4728-a1d7-896535834b5f'); ">
+<td><span id="span-d6945a9c-263f-4728-a1d7-896535834b5f" class="glyphicon glyphicon-minus" style="color:blue"></span></td>
+<td class="break-word">no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;tblHospitalList_wrapper&apos;]/div[2]/button[2]&quot;}
+  (Session info: chrome=108.0.5359.126)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-NU8MI4J&apos;, ip: &apos;10.23.252.35&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.126, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\NICSI\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63552}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f4b9d79fd18fd1346dcf396e49071bfa
+*** Element info: {Using=xpath, value=//*[@id=&apos;tblHospitalList_wrapper&apos;]/div[2]/button[2]}</td><td>1</td><td></td></tr><tr class="child-row29" style="display: table-row;"><td></td><td><i>Suite Name</i></td><td><i>Test Name</i></td><td><i>Class Name</i></td></tr><tr class="child-row29" style="display: table-row;"><td></td><td><a href="suites_overview.html#Regression Suite">Regression Suite</a></td><td><a href="suite1_test1_results.html">eCollabDDS Tests</a></td><td class="break-word">tests.Admin_Hospitals_Pages_Tests</td></tr>
+<tr class="parent" id="row30" title="Click to expand/collapse" style="cursor: pointer;" onclick="changeIcon('span-e40c19f8-4073-4222-9fb8-2e14beb69f56'); ">
+<td><span id="span-e40c19f8-4073-4222-9fb8-2e14beb69f56" class="glyphicon glyphicon-minus" style="color:blue"></span></td>
+<td class="break-word">no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;tblHospitalList_wrapper&apos;]/div[3]/div[1]/div/table/thead/tr/th[1]&quot;}
+  (Session info: chrome=108.0.5359.126)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-NU8MI4J&apos;, ip: &apos;10.23.252.35&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.126, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\NICSI\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63552}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f4b9d79fd18fd1346dcf396e49071bfa
+*** Element info: {Using=xpath, value=//*[@id=&apos;tblHospitalList_wrapper&apos;]/div[3]/div[1]/div/table/thead/tr/th[1]}</td><td>1</td><td></td></tr><tr class="child-row30" style="display: table-row;"><td></td><td><i>Suite Name</i></td><td><i>Test Name</i></td><td><i>Class Name</i></td></tr><tr class="child-row30" style="display: table-row;"><td></td><td><a href="suites_overview.html#Regression Suite">Regression Suite</a></td><td><a href="suite1_test1_results.html">eCollabDDS Tests</a></td><td class="break-word">tests.Admin_Hospitals_Pages_Tests</td></tr>
+<tr class="parent" id="row31" title="Click to expand/collapse" style="cursor: pointer;" onclick="changeIcon('span-ce590f7d-9cce-4729-a9f4-316a141f3ade'); ">
+<td><span id="span-ce590f7d-9cce-4729-a9f4-316a141f3ade" class="glyphicon glyphicon-minus" style="color:blue"></span></td>
+<td class="break-word">no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;tblOrganizationList_wrapper&apos;]/div[3]/div[1]/div/table/thead/tr/th[1]&quot;}
+  (Session info: chrome=108.0.5359.126)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-NU8MI4J&apos;, ip: &apos;10.23.252.35&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.126, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\NICSI\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63552}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f4b9d79fd18fd1346dcf396e49071bfa
+*** Element info: {Using=xpath, value=//*[@id=&apos;tblOrganizationList_wrapper&apos;]/div[3]/div[1]/div/table/thead/tr/th[1]}</td><td>1</td><td></td></tr><tr class="child-row31" style="display: table-row;"><td></td><td><i>Suite Name</i></td><td><i>Test Name</i></td><td><i>Class Name</i></td></tr><tr class="child-row31" style="display: table-row;"><td></td><td><a href="suites_overview.html#Regression Suite">Regression Suite</a></td><td><a href="suite1_test1_results.html">eCollabDDS Tests</a></td><td class="break-word">tests.Admin_Client_Organization_Pages_Tests</td></tr>
+<tr class="parent" id="row32" title="Click to expand/collapse" style="cursor: pointer;" onclick="changeIcon('span-cf858e24-93a3-4cd2-bb00-2210c355db88'); ">
+<td><span id="span-cf858e24-93a3-4cd2-bb00-2210c355db88" class="glyphicon glyphicon-minus" style="color:blue"></span></td>
+<td class="break-word">no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;tblUserList_wrapper&apos;]/div[2]/button[3]&quot;}
+  (Session info: chrome=108.0.5359.126)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-NU8MI4J&apos;, ip: &apos;10.23.252.35&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.126, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\NICSI\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63552}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f4b9d79fd18fd1346dcf396e49071bfa
+*** Element info: {Using=xpath, value=//*[@id=&apos;tblUserList_wrapper&apos;]/div[2]/button[3]}</td><td>2</td><td></td></tr><tr class="child-row32" style="display: table-row;"><td></td><td><i>Suite Name</i></td><td><i>Test Name</i></td><td><i>Class Name</i></td></tr><tr class="child-row32" style="display: table-row;"><td></td><td><a href="suites_overview.html#Regression Suite">Regression Suite</a></td><td><a href="suite1_test1_results.html">eCollabDDS Tests</a></td><td class="break-word">tests.Admin_HospitalUsers_Pages_Tests</td></tr>
+<tr class="child-row32" style="display: table-row;"><td></td><td><a href="suites_overview.html#Regression Suite">Regression Suite</a></td><td><a href="suite1_test1_results.html">eCollabDDS Tests</a></td><td class="break-word">tests.Admin_HospitalUsers_Pages_Tests</td></tr>
+<tr class="parent" id="row33" title="Click to expand/collapse" style="cursor: pointer;" onclick="changeIcon('span-60e6eaff-8cfe-4055-97b6-b522b2f18d75'); ">
+<td><span id="span-60e6eaff-8cfe-4055-97b6-b522b2f18d75" class="glyphicon glyphicon-minus" style="color:blue"></span></td>
+<td class="break-word">no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;tblUserList_wrapper&apos;]/div[3]/div[1]/div/table/thead/tr/th[1]&quot;}
+  (Session info: chrome=108.0.5359.126)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-NU8MI4J&apos;, ip: &apos;10.23.252.35&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.126, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\NICSI\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63552}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f4b9d79fd18fd1346dcf396e49071bfa
+*** Element info: {Using=xpath, value=//*[@id=&apos;tblUserList_wrapper&apos;]/div[3]/div[1]/div/table/thead/tr/th[1]}</td><td>1</td><td></td></tr><tr class="child-row33" style="display: table-row;"><td></td><td><i>Suite Name</i></td><td><i>Test Name</i></td><td><i>Class Name</i></td></tr><tr class="child-row33" style="display: table-row;"><td></td><td><a href="suites_overview.html#Regression Suite">Regression Suite</a></td><td><a href="suite1_test1_results.html">eCollabDDS Tests</a></td><td class="break-word">tests.Admin_HospitalUsers_Pages_Tests</td></tr>
+
+			</tbody>
+		</table>
+	</div>
+	
+	<div class="well well-large">
+	<h4>New Features Issues</h4>
+		<table class="table table-bordered" width="100%;" id="features">
+			<thead>
+				<tr>
+					<th scope="col" width="30px">#</th>
+					<th scope="col">Issue</th>
+					<th scope="col" colspan="2">Total Affected Tests</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr style="display: table-row;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+			</tbody>
+		</table>
+	</div>
+	
+</div>	
+</body>
+</html>
